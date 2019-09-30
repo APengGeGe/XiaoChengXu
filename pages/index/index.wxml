@@ -1,0 +1,25 @@
+<!--index.wxml-->
+
+<view>
+<van-search 
+  id="top"
+  value="{{ value }}"
+  placeholder="请输入搜索关键词"
+  use-action-slot
+  bind:search="onSearch"
+>
+<view slot="action" bindtap="bei">{{weizhi}}</view>
+</van-search>
+  <view id="top" style="float:left;width:35vw" >
+     <van-sidebar style="width:35vw"  active="{{ active }}" bind:change="onChange" wx:for="{{list}}" wx:key="{{index}}">
+      <van-sidebar-item custom-class="class"  title="{{item.pname}}"/>
+  </van-sidebar>
+  </view>
+ 
+<view style="float:right;width:60vw">
+ <van-grid column-num="2"  >
+  <van-grid-item style="width:65vw" wx:for="{{list}}" icon="{{item.pimg}}" text="{{item.pname}}" bindtap="tao" data-id="{{item.pid}}"/>
+</van-grid>
+</view>
+
+</view>

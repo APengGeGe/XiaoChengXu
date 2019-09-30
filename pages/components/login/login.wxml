@@ -1,0 +1,59 @@
+<!--pages/components/login/login.wxml-->
+<view wx:if="{{yin}}">
+<van-cell-group>
+  <van-field
+    value="{{ username }}"
+    required
+    clearable
+    label="账号"
+    icon="friends-o"
+    placeholder="请输入用户名"
+    bind:click-icon="onClickIcon"
+    bind:change="onChange1"
+  />
+
+  <van-field
+    value="{{ password }}"
+    type="password"
+    label="密码"
+    placeholder="请输入密码"
+    required
+    icon="eye-o"
+    border="{{ false }}"
+    bind:change="onChange2"
+  />
+</van-cell-group>
+
+<van-button type="primary" bindtap="deng">登录</van-button>
+</view>
+
+<view wx:if="{{cang}}">
+<van-cell-group>
+  <van-field
+    value="{{ username }}"
+    required
+    clearable
+    label="账号"
+    icon="friends-o"
+    placeholder="请输入用户名"
+    bind:click-icon="onClickIcon"
+    bind:change="onChange3"
+  />
+
+  <van-field
+    value="{{ password }}"
+    type="password"
+    label="密码"
+    placeholder="请输入密码"
+    required
+    icon="eye-o"
+    border="{{ false }}"
+    bind:change="onChange4"
+  />
+</van-cell-group>
+
+<van-button type="primary" bindtap="zhu">注册</van-button>
+<van-button type="primary" bindtap="zhi">直接登陆</van-button>
+</view>
+ 
+ 

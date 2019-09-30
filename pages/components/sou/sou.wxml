@@ -1,0 +1,37 @@
+<!--pages/components/sou/sou.wxml-->
+<view>
+<view>
+    <van-search 
+      id="top"
+      value="{{ value }}"
+      placeholder="请输入搜索关键词"
+      use-action-slot
+      bind:change="change"
+      bind:search="onSearch"
+    >
+   <view slot="action" bind:tap="onSearch">搜索</view>
+</van-search>
+</view>
+
+<view wx:if="{{sou}}">
+    <view style="font-size:16px;margin:20px 0 10px 20px;"><van-icon name="fire-o"/>热门搜索</view>
+    <view id="ul">
+      <ul wx:for="{{list1}}" wx:key="{{index}}"id="ul" >
+        <li style="margin:10px 10px;border:1px solid #0f0;font-size:12px;text-align:center;width:100px;height:30px;line-height:30px;float:left;overflow:hidden"  bindtap="liebiao" data-id="{{item.pid}}" >{{item.pname}}</li>
+
+      </ul>
+    </view>
+    <view style="width:100vw;font-size:16px;margin:30px 20px;">
+    <van-icon name="orders-o" />
+    搜索记录
+    <van-icon name="new-o" bind:click="shan" size="20px;margin:0 0 0 20vw"/>
+    </view>
+   <van-cell wx:for="{{jilu}}" bind:click="dian" wx:key="{{index}}"  title="{{item}}" is-link />
+</view>
+
+<view wx:if="{{lie}}">
+  <view wx:for="{{list}}" wx:key="{{index}}" bindtap="liebiao" data-id="{{item.pid}}" id="lie">{{item.pname}}</view>
+</view>
+
+</view>
+ 

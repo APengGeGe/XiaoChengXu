@@ -1,0 +1,48 @@
+/* pages/wode/wode.wxss */ 
+#top{
+  width:100vw;
+  height:40vh; 
+  background:#71C671;
+  display: flex;
+  position: relative;
+} 
+#imga{
+  float: left;
+  margin:0 20px;
+}
+#hui{
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around
+}
+#hui1{
+  display: flex;
+ 
+}
+#kai{
+  flex:1;
+  width:150px;
+  height:25px;
+  background:#000;
+  text-align:center;
+  line-height:25px;
+  border-radius:20px;
+  margin:10px 0;
+  color:#71C671;
+  font-size:14px
+}
+#ul{
+  display: flex;
+  justify-content: space-around;
+  box-shadow:1px 1px 12px #909090;
+  border-radius: 10px 10px 0 0; 
+}
+li{
+  display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+
+}

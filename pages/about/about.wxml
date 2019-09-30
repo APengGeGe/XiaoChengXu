@@ -1,0 +1,36 @@
+
+<view style="width:100vw; height:100vh">
+<image style="width:100vw; height:60vh" src="{{arr.pimg}}"></image>
+<view style="border-bottom:1px solid #eee">
+   <view style="margin:5px 0">
+   <p style="background:red;margin:0 10px">自营</p>{{arr.pname}}
+   </view>
+  <view style="color:red;margin:10px 6px">单价：￥{{arr.pprice}}</view>
+</view>
+ 
+<view style="font-size:15px;margin:10px 5px;color:#cecece">{{arr.pdesc}}</view>
+<van-stepper value="{{val}}" bind:change="onChange"  style="margin:0 5px"/>
+
+<van-goods-action class="foot">
+  <van-goods-action-icon
+    icon="chat-o"
+    text="客服"
+  /> 
+  <van-goods-action-icon icon="cart-o" text="购物车"  bind:click="onClickIcon" info="{{num}}" />
+  <van-goods-action-button
+    text="加入购物车"
+    type="warning"
+    bindtap="adds" 
+    data-id="{{arr.pid}}"
+  />
+</van-goods-action>
+ 
+<van-action-sheet show="{{ show }}" title="标题" bind:close="guan">
+  <view className="tan">
+  内容
+   
+  </view>
+</van-action-sheet>
+
+</view>
+ 

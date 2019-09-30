@@ -1,0 +1,78 @@
+<!--pages/home/home.wxml-->
+
+<view id="index">
+
+<view> 
+<van-search 
+  id="top"
+  value="{{ value }}"
+  placeholder="请输入搜索关键词"
+  use-action-slot
+ bind:focus="onSearch"
+>
+<view slot="action" bindtap="bei">{{weizhi}}</view>
+</van-search>
+</view>
+
+
+<view id="foot">
+     <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000" 
+     circular="{{circular}}">
+
+   <block wx:for="{{movies}}"  wx:for-index="index">
+
+        <swiper-item>
+            <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>
+
+        </swiper-item>
+
+    </block>
+
+</swiper>
+
+
+ <swiper class="swiper1" indicator-dots="true" autoplay="true" interval="5000" duration="1000" 
+ circular="{{circular}}">
+   <block>
+        <swiper-item>
+              <van-grid>
+                <van-grid-item wx:for="{{list}}" wx:key="{{index}}" icon="{{item.pimg}}" text="{{item.pname}}" 
+                bindtap="tiao" data-id="{{item.pid}}"/>
+              </van-grid>
+        </swiper-item>
+        <swiper-item>
+              <van-grid>
+                <van-grid-item wx:for="{{list}}" wx:key="{{index}}" icon="{{item.pimg}}" text="{{item.pname}}" bindtap="tiao" data-id="{{item.pid}}"/>
+              </van-grid>
+        </swiper-item>
+
+    </block>
+
+</swiper>
+
+
+<van-card
+  wx:for="{{biao}}"
+  wx:key="{{index}}"
+  price="{{item.pprice}}"
+  desc="{{item.pdesc}}"
+  title="{{item.pname}}"
+  thumb="{{item.pimg}}"
+  custom-class="liebiao"
+  price-class="jia"
+  desc-class="desc"
+  title-class="tit"
+  thumb-class="imag"
+>
+
+  <view slot="footer">
+    <van-stepper value="{{val}}" bind:change="onChange"/>
+    <van-icon name="arrow" style="font-size:25px;margin-right:20px" bindtap="jian" data-id="{{item.pid}}"/>
+    <van-icon name="shopping-cart-o" style="font-size:25px;" bindtap="gou"  data-id="{{item.pid}}"/>
+  </view>
+</van-card>
+
+</view>
+</view>
+
+

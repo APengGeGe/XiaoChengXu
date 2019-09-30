@@ -1,0 +1,54 @@
+/* pages/home/home.wxss */
+#index{
+  overflow: auto
+}
+#top{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100vw;
+  background: #0f0
+}
+#foot{
+ margin-top:46px;
+}
+.swiper{
+  width: 100%;
+ height:200px;
+ margin-top:46px;
+}
+swiper-item{
+ width: 100%;
+ height:200px;
+ position: absolute;
+ top:0;left:0;
+}
+.slide-image{
+ width: 100%;
+ height:200px;
+ position: absolute;
+ top:0;left:0;
+}
+.liebiao{
+  
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-shadow:2px 2px 12px #909090;
+}
+.jia{
+  margin-top:20px;
+  color:red;
+  font-size:16px;
+}
+.desc{
+   margin-top:5px;
+  font-size:16px
+}
+.tit{
+     margin-top:30px;
+    font-size:17px
+}
+.imag{
+   padding-top:30px;
+}
+

@@ -1,0 +1,9 @@
+/* pages/about/about.wxss */ 
+.foot{
+  position: fixed;
+  bottom: 0;
+  left:0
+}
+.tan{
+  height:50vh;
+}

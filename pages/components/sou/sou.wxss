@@ -1,0 +1,13 @@
+/* pages/components/sou/sou.wxss */ 
+#lie{
+  height:8vh;
+  border-bottom: 1px solid #eee;
+  font-size:14px;
+  color:#ccc;
+  line-height: 8vh;
+  
+}
+#ul{
+  width:100vw;height:25vh; 
+  border-bottom: 1px solid #71C671
+}

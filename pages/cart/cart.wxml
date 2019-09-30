@@ -1,0 +1,46 @@
+
+<view>
+<view style="width:100vw;height:5vh,background:#eee;margin:10px 20px;color:#ccc">
+日常清单</view>
+<van-card 
+  wx:for="{{list}}" 
+  wx:key="{{index}}"
+  tag="apeng"
+  price="{{item.pprice}}"
+  desc="{{item.pdesc}}"
+  title="{{item.pname}}"
+  thumb="{{item.pimg}}"
+  class="top"
+  custom-class="liebiao"
+  price-class="jia"
+  desc-class="desc"
+  title-class="tit"
+  thumb-class="imag"
+  
+>
+  <view slot="footer">
+    <van-stepper value="{{item.pnum}}" bind:change="onChange" data-id="{{item.pid}}" />
+    <checkbox checked="{{item.select}}" bindtap="dan" data-id="{{index}}"/>
+    <van-button type="warning"  bindtap="dels" data-id="{{item.pid}}" data-index="{{index}}">删除</van-button>
+
+
+  </view>
+</van-card>
+</view>
+
+<van-submit-bar
+  button-text="提交订单"
+  bindtap="dingdan"
+> 
+  
+  <view id="quan">全选：<checkbox checked="{{checkeds}}" bindtap="quan"/></view>
+  <view style="margin:0 20px;" id="zong">总价:￥{{money}}</view>
+  <view slot="tip">
+    您的收货地址不支持同城送, <text>修改地址</text>
+  </view>
+</van-submit-bar>
+
+
+
+<button bindtap="adds" data-id="{{arr.pid}}">立即购买</button>
+

@@ -1,0 +1,33 @@
+/* pages/cart/cart.wxss */
+#quan{
+  position: absolute;
+  left:0;top:50px
+}
+#zong{
+  position:absolute;
+  left:100px;top:50px;
+  font-size:16px;
+  color:red
+}
+.liebiao{
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-shadow:2px 2px 12px #909090;
+  margin-bottom:38px;
+}
+.jia{
+  margin-top:20px;
+  color:red;
+  font-size:16px;
+}
+.desc{
+   margin-top:5px;
+  font-size:16px
+}
+.tit{
+     margin-top:30px;
+    font-size:17px
+}
+.imag{
+   padding-top:30px;
+}

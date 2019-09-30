@@ -1,0 +1,6 @@
+<!--pages/components/zhanghao/zhanghao.wxml-->
+<view>
+  <van-cell title="设置支付" is-link  />
+  <van-cell title="退出账号" is-link bindtap="deng"/>
+</view>
+ 

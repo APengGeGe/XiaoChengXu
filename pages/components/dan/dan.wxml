@@ -1,0 +1,20 @@
+<!--pages/components/dan/dan.wxml-->
+<view>
+<van-tabs active="{{ active }}" bind:change="onChange" >
+  <van-tab title="未完成">
+    <van-card
+        wx:for="{{list}}"
+        wx:key="{{index}}"
+        num="{{item.pnum}}" 
+        price="{{item.pprice}}"
+        desc="{{item.pdesc}}"
+        title="{{item.pname}}"
+        thumb="{{item.pimg}}"
+      />
+  </van-tab>
+  <van-tab title="已完成" >暂无购买记录</van-tab>
+  <van-tab title="已取消" >暂无信息</van-tab>
+</van-tabs>
+    
+</view>
+ 
